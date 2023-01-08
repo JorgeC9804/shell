@@ -1,0 +1,12 @@
+@media (max-width: 800px) {
+}
+
+@media (max-width: 580px) {
+  .shell {
+    /* width: 260px; */
+  }
+  .ipt {
+    /* width: 100%;
+    height: 24px; */
+  }
+}

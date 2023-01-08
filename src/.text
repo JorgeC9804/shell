@@ -1,0 +1,19 @@
+Patron
+Empleados
+Cliente
+
+El dueño debe iniciar sesion, asi como llenar
+cierto formulario para dar de alta su
+empresa indicando de que es
+
+Section owner
+
+- Donde el dueño indicara ciertas caracteristicas de su empresa
+
+Section employees
+
+- Ellos se encargaran de actualizar la informacion (cantidad, presios, paquetes, etc)
+
+Section client
+
+- Los clientes tendran acceso a lectura asi como a elegir que pediran
