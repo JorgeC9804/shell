@@ -8,6 +8,17 @@
 }
 @media (max-width: 680px) {
   .shell {
-    width: 350px;
+    width: 300px;
+    height: 480px;
+  }
+  .icon {
+    position: relative;
+    bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .shell {
+    width: 270px;
+    height: 480px;
   }
 }
