@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ShopOutlined } from "@ant-design/icons";
 import "../styles/sessions/session.css";
 import "../styles/sessions/media.session.css";
 
@@ -49,65 +50,70 @@ const Signup = () => {
   };
 
   return (
-    <div className="sign-up dy center">
-      <div className="shell dy center">
-        <form action="#" onSubmit={handleSubmit} className="dy column center">
-          <label htmlFor="name" className="lb">
-            name *
-            <br />
-            <input
-              className={
-                number === 1 ? `ipt active-${number.toString()}` : `ipt bgd-t`
-              }
-              type="text"
-              id="name"
-              name="name"
-              onChange={e => handleActive(1, "name", e)}
-            />
-          </label>
-          <label htmlFor="lastName" className="lb">
-            last name *
-            <br />
-            <input
-              className={
-                number === 2 ? `ipt active-${number.toString()}` : `ipt bgd-t`
-              }
-              type="text"
-              id="lastName"
-              name="lastName"
-              onChange={e => handleActive(2, "lastName", e)}
-            />
-          </label>
-          <label htmlFor="password" className="lb">
-            password *
-            <br />
-            <input
-              className={
-                number === 3 ? `ipt active-${number.toString()}` : `ipt bgd-t`
-              }
-              type="password"
-              id="password"
-              name="password"
-              onChange={e => handleActive(3, "password", e)}
-            />
-          </label>
-          <label htmlFor="birth" className="lb">
-            birth *
-            <br />
-            <input
-              type="date"
-              id="birth"
-              name="birth"
-              className={
-                number === 4 ? `ipt active-${number.toString()}` : `ipt bgd-t`
-              }
-              onChange={e => handleActive(4, "birth", e)}
+    <div className="sign-up">
+      <div className="flag-1 dy center">
+        <div className="shell dy center column">
+          <div>
+            <ShopOutlined className="icon" />
+          </div>
+          <form action="#" onSubmit={handleSubmit} className="dy column center">
+            <label htmlFor="name" className="lb">
+              name *
+              <br />
+              <input
+                className={
+                  number === 1 ? `ipt active-${number.toString()}` : `ipt bgd-t`
+                }
+                type="text"
+                id="name"
+                name="name"
+                onChange={e => handleActive(1, "name", e)}
+              />
+            </label>
+            <label htmlFor="lastName" className="lb">
+              last name *
+              <br />
+              <input
+                className={
+                  number === 2 ? `ipt active-${number.toString()}` : `ipt bgd-t`
+                }
+                type="text"
+                id="lastName"
+                name="lastName"
+                onChange={e => handleActive(2, "lastName", e)}
+              />
+            </label>
+            <label htmlFor="password" className="lb">
+              password *
+              <br />
+              <input
+                className={
+                  number === 3 ? `ipt active-${number.toString()}` : `ipt bgd-t`
+                }
+                type="password"
+                id="password"
+                name="password"
+                onChange={e => handleActive(3, "password", e)}
+              />
+            </label>
+            <label htmlFor="birth" className="lb">
+              birth *
+              <br />
+              <input
+                type="date"
+                id="birth"
+                name="birth"
+                className={
+                  number === 4 ? `ipt active-${number.toString()}` : `ipt bgd-t`
+                }
+                onChange={e => handleActive(4, "birth", e)}
 
-              // onChange={e => setBirth(e.target.value)}
-            />
-          </label>
-          <input value="submit" type="submit" />
-        </form>
+                // onChange={e => setBirth(e.target.value)}
+              />
+            </label>
+            <input value="submit" type="submit" />
+          </form>
+        </div>
       </div>
     </div>
   );
