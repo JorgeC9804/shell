@@ -9,11 +9,11 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [birth, setBirth] = useState(null);
 
-  // const handleDBSession = () => {
-  //   /**
-  //    * here conection data base
-  //    */
-  // };
+  const handleDBSession = () => {
+    /**
+     * here conection data base
+     */
+  };
 
   const handleActive = (number, restriction, e) => {
     /**

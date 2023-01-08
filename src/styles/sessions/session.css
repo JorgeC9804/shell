@@ -1,5 +1,5 @@
 .sign-up {
-  background-color: rgb(255, 244, 206);
+  background-color: rgb(28, 28, 28);
   height: 100vh;
   width: 100%;
 }
@@ -7,20 +7,21 @@
 .shell {
   /* position: absolute;
   top: 0; */
-  background-color: rgb(255, 244, 233);
+  background-color: rgba(39, 39, 39, 0.578);
   box-shadow: 0px 5px 30px;
   transition: 0.3s;
-  padding: 20px;
+  padding: 30px;
   /* box-sizing: border-box; */
-  width: 300px;
+  width: 350px;
   height: 550px;
 }
 /* --------------- input ----------------- */
 .lb {
+  color: white;
   font-size: 20px;
   margin-bottom: 60px;
   font-family: "Courier New", Courier, monospace;
-  border: 1px solid;
+  /* border: 1px solid; */
   width: 90%;
   /* si lo esta tomado, solo que el paddin 
   es aparte */
@@ -51,19 +52,19 @@
   font-family: "Courier New", Courier, monospace;
 }
 .active-1 {
-  background-color: rgb(12, 129, 129);
+  background-color: rgb(175, 175, 175);
   box-shadow: 8px 8px 18px;
 }
 .active-2 {
-  background-color: rgb(12, 129, 129);
+  background-color: rgb(175, 175, 175);
   box-shadow: 8px 8px 18px;
 }
 .active-3 {
-  background-color: rgb(12, 129, 129);
+  background-color: rgb(175, 175, 175);
   box-shadow: 8px 8px 18px;
 }
 .active-4 {
-  background-color: rgb(12, 129, 129);
+  background-color: rgb(175, 175, 175);
   box-shadow: 8px 8px 18px;
 }
 
@@ -71,10 +72,12 @@
 .shell:hover {
   box-shadow: 0px 13px 30px;
   border-radius: 15px;
-  background-color: rgb(12, 129, 129);
+  background: linear-gradient(#ff00c8da, #60004caf, rgba(30, 30, 30, 0.756));
 }
 .ipt:hover {
-  background-color: rgb(12, 129, 129);
+  /* background-color: #ff00c8af; */
+  /* background-color: black; */
+  background-color: rgb(175, 175, 175);
   box-shadow: 8px 8px 18px;
 }
 
@@ -88,7 +91,7 @@ form {
   display: flex;
 }
 .bgd-t {
-  background-color: transparent;
+  background-color: rgb(175, 175, 175);
 }
 .center {
   justify-content: center;
