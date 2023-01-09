@@ -29,7 +29,7 @@ const Signup = () => {
       });
     } catch (Exception) {
       console.log(Exception.message);
-      // setError({ response: false, message: Exception.message });
+      setError({ response: false, message: Exception.message });
       // setNext(true);
     }
   };
@@ -148,10 +148,10 @@ const Signup = () => {
               />
             </label>
             <label className="lb dy center">
-              <Link className="submit dy center" to="/shingando">
+              {/* <Link className="submit dy center" to="/shingando">
                 submit
-              </Link>
-              {/* <input className="submit" value="submit" type="submit" /> */}
+              </Link> */}
+              <input className="submit" value="submit" type="submit" />
             </label>
           </form>
         </div>
