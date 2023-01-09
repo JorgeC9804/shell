@@ -6,6 +6,7 @@ import Owner from "./moduls/Owner";
 import Client from "./pages/Client";
 import Employee from "./pages/Employee";
 import Main from "./pages/Main";
+import Shingando from "./pages/Shingando";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/session/:namesession" element={<Session />} />
             <Route path="/owner" element={<Owner />} />
             <Route path="/employee" element={<Employee />} />
+            <Route path="/shingando" element={<Shingando />} />
             <Route path="/client" element={<Client />} />
           </Routes>
         </BrowserRouter>

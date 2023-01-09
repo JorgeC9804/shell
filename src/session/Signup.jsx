@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {
   UserAddOutlined,
@@ -14,12 +15,13 @@ const Signup = () => {
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [birth, setBirth] = useState("");
+  const [next, setNext] = useState(false);
   const [error, setError] = useState({ response: true, message: "" });
 
   const handleDBSession = async data => {
     console.log(data);
     try {
-      await axios.post("http:", {
+      const response = await axios.post("http:", {
         name: data.name,
         lastName: data.lastName,
         password: data.password,
@@ -27,7 +29,8 @@ const Signup = () => {
       });
     } catch (Exception) {
       console.log(Exception.message);
-      setError({ response: false, message: Exception.message });
+      // setError({ response: false, message: Exception.message });
+      setNext(true);
     }
   };
 
@@ -145,7 +148,10 @@ const Signup = () => {
               />
             </label>
             <label className="lb dy center">
-              <input className="submit" value="submit" type="submit" />
+              <Link className="submit dy center" to="/shingando">
+                submit
+              </Link>
+              {/* <input className="submit" value="submit" type="submit" /> */}
             </label>
           </form>
         </div>
