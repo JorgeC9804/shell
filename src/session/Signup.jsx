@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { ShopOutlined } from "@ant-design/icons";
+import axios from "axios";
+import {
+  UserAddOutlined,
+  LoadingOutlined,
+  DoubleRightOutlined,
+} from "@ant-design/icons";
 import "../styles/sessions/session.css";
 import "../styles/sessions/media.session.css";
 
@@ -8,13 +13,27 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
-  const [birth, setBirth] = useState(null);
+  const [birth, setBirth] = useState("");
+  const [error, setError] = useState({ response: true, message: "" });
 
-  // const handleDBSession = () => {
-  //   /**
-  //    * here conection data base
-  //    */
-  // };
+  const handleDBSession = async data => {
+    console.log(data);
+    try {
+      await axios.post("http:", {
+        name: data.name,
+        lastName: data.lastName,
+        password: data.password,
+        birth: data.birth,
+      });
+    } catch (Exception) {
+      console.log(Exception.message);
+      setError({ response: false, message: Exception.message });
+    }
+  };
+
+  const handleClose = () => {
+    setError({ response: true, message: "" });
+  };
 
   const handleActive = (number, restriction, e) => {
     /**
@@ -36,25 +55,39 @@ const Signup = () => {
   const handleSubmit = e => {
     e.preventDefault();
     e.target.reset();
-    const data = {
-      name,
-      lastName,
-      password,
-    };
+
     setName("");
     setLastName("");
     setPassword("");
     setBirth("");
-    console.log(data);
-    console.log(birth);
+    handleDBSession({
+      name,
+      lastName,
+      password,
+      birth,
+    });
   };
 
   return (
     <div className="sign-up">
       <div className="flag-1 dy center">
+        <div className="s-colors"></div>
+        {error.response ? (
+          <></>
+        ) : (
+          <div className="message-error dy center column">
+            <button onClick={handleClose} className="icons-close">
+              <DoubleRightOutlined />
+            </button>
+            <LoadingOutlined className="icon-error" />
+            <br />
+            {error.message}
+          </div>
+        )}
         <div className="shell dy center column">
           <div>
-            <ShopOutlined className="icon" />
+            {/* <ShopOutlined className="icon" /> */}
+            <UserAddOutlined className="icon" />
           </div>
           <form action="#" onSubmit={handleSubmit} className="dy column center">
             <label htmlFor="name" className="lb">
@@ -111,7 +144,9 @@ const Signup = () => {
                 // onChange={e => setBirth(e.target.value)}
               />
             </label>
-            <input value="submit" type="submit" />
+            <label className="lb dy center">
+              <input className="submit" value="submit" type="submit" />
+            </label>
           </form>
         </div>
       </div>

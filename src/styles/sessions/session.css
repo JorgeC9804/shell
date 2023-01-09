@@ -1,13 +1,14 @@
 .sign-up {
-  /* background-color: rgb(28, 28, 28); */
+  background-color: rgb(28, 28, 28);
   /* background-color: rgb(255, 123, 0); */
   height: 100vh;
   width: 100%;
 }
 .flag-1 {
-  background-image: url("../../session//pictures/retro.jpg");
+  /* background-image: url("../../session//pictures/retro_1.png");
+  background-color: blue;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   width: 100%;
   height: 100vh;
 }
@@ -23,6 +24,7 @@
   width: 350px;
   height: 550px;
   border-radius: 10px;
+  z-index: 9;
 }
 /* --------------- input ----------------- */
 .lb {
@@ -32,7 +34,7 @@
   font-family: "Courier New", Courier, monospace;
   /* border: 1px solid; */
   width: 90%;
-  /* si lo esta tomado, solo que el paddin 
+  /* si lo esta tomado, solo que el paddin
   es aparte */
 }
 /* * */
@@ -62,9 +64,54 @@
 }
 .icon {
   position: relative;
-  bottom: 40px;
+  bottom: 20px;
   font-size: 80px;
   color: rgba(192, 192, 192, 0.685);
+}
+.icon-error {
+  font-size: 50px;
+}
+.icons-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 35px;
+  background: transparent;
+  color: rgb(228, 0, 118);
+  outline: 0;
+  cursor: pointer;
+  /* border: 1px solid rgb(228, 0, 118); */
+}
+.submit {
+  position: relative;
+  top: 30px;
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  transition: 0.2s;
+  background-color: rgba(240, 248, 255, 0.324);
+  font-family: "Courier New", Courier, monospace;
+}
+.s-colors {
+  position: absolute;
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(255, 157, 0);
+  border: 1px solid;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.message-error {
+  position: absolute;
+  width: 95%;
+  height: 90vh;
+  color: white;
+  transition: 0.4s;
+  background-color: rgba(0, 0, 0, 0.847);
+  font-family: "Courier New", Courier, monospace;
+  z-index: 10;
 }
 .active-1 {
   background-color: rgb(175, 175, 175);
@@ -88,7 +135,7 @@
   box-shadow: 0px 13px 30px;
   border-radius: 15px;
   /* background-color: yellowgreen; */
-  background-color: rgba(25, 31, 60, 0.74);
+  background-color: rgba(25, 31, 60, 0.468);
   /* background: linear-gradient(rgba(27, 32, 87, 0.874), rgb(30, 30, 30)); */
 }
 .ipt:hover {
@@ -97,7 +144,15 @@
   background-color: rgb(175, 175, 175);
   box-shadow: 8px 8px 18px;
 }
-
+.submit:hover {
+  font-size: 22px;
+  background-color: rgba(240, 248, 255, 0.74);
+  box-shadow: 0px 10px 15px;
+}
+.message-error:hover {
+  background-color: black;
+  border-radius: 15px;
+}
 /* --------------- labels ----------------- */
 form {
   width: 100%;

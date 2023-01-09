@@ -5,6 +5,9 @@
   .shell {
     width: 550px;
   }
+  .s-colors {
+    width: 200px;
+  }
 }
 @media (max-width: 680px) {
   .shell {
